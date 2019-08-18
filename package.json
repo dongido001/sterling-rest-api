@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "dev": "nodemon index.js",
-    "serve": "node index.js"
+    "serve": "node index.js",
+    "install-script": "npm install -g yarn && yarn install --frozen-lockfile --production --no-cache && npm serve"
   },
   "author": "Onwuka Gideon",
   "license": "ISC",
@@ -16,6 +17,7 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
     "express": "^4.17.1",
     "express-jwt": "^5.3.1",
     "express-redis-cache": "^1.1.3",
@@ -31,8 +33,5 @@
     "@babel/register": "^7.5.5",
     "babel-plugin-transform-runtime": "^6.23.0",
     "jest": "^24.9.0"
-  },
-  "engines": {
-    "node": "10.x"
   }
 }

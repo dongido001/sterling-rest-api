@@ -1,4 +1,9 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test', {useNewUrlParser: true});
+mongoose.connect(
+    `mongodb://${process.env.MONGODB_HOST}/test`, 
+    {
+        useNewUrlParser: true
+    }
+);
 
 module.exports =  mongoose;

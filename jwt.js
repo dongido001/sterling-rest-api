@@ -31,7 +31,6 @@ async function isRevoked(req, payload, done) {
 };
 
 function permit(...allowed) {
-    
     const isAllowed = roles => () => {
         roles.forEach(role => {
             if (allowed.includes(role)) return true;
