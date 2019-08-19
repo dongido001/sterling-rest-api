@@ -5,7 +5,7 @@ const schema = new Schema({
     name: { type: String, unique: true, required: true },
     logo: { type: String, required: true },
     detail: { type: String, required: true },
-    cretedBy: { type: Schema.Types.ObjectId, ref: 'User'},
+    createdBy: { type: Schema.Types.ObjectId, ref: 'User'},
     createdDate: { type: Date, default: Date.now }
 });
 

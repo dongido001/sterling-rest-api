@@ -7,7 +7,8 @@
     "test": "jest",
     "dev": "nodemon index.js",
     "serve": "node index.js",
-    "install-script": "npm install -g yarn && yarn install --frozen-lockfile --production --no-cache && npm serve"
+    "install-script": "npm install -g yarn && yarn install --frozen-lockfile --production --no-cache && npm serve",
+    "seed": "npm Seed.js"
   },
   "author": "Onwuka Gideon",
   "license": "ISC",

@@ -19,9 +19,9 @@ async function create(req, res, next) {
         return res.status(400).json({status: "error", message: "You are not authorize"});
     }
 
-    TeamService.create({...req.body, cretedBy: req.user.sub})
+    TeamService.create({...req.body, createdBy: req.user.sub})
         .then((team) => res.status(201).json({status: "success", team}))
-        .catch(err => res.status(200).json({status: "error", err}) );
+        .catch(err => res.status(500).json({status: "error", err}) );
 }
 
 function getAll(req, res, next) {

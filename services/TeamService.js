@@ -20,6 +20,7 @@ async function getById(id) {
 
 async function create(teamParam) {
     // validate
+
     if (await Team.findOne({ name: teamParam.name })) {
         throw 'Team "' + teamParam.name + '" is already taken';
     }
@@ -27,7 +28,7 @@ async function create(teamParam) {
     const team = new Team(teamParam);
 
     // save user
-    return team.save();
+    return await team.save();
 }
 
 async function update(id, teamParam) {

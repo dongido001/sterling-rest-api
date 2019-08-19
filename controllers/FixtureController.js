@@ -16,7 +16,7 @@ router.delete('/:id', permit('admin'), _delete);
 module.exports = router;
 
 async function create(req, res, next) {
-    FixtureService.create({...req.body, cretedBy: req.user.sub})
+    FixtureService.create({...req.body, createdBy: req.user.sub})
         .then((fixture) => res.status(201).json({status: "success", fixture}))
         .catch(err => res.status(400).json({status: "error", err}) );
 }
