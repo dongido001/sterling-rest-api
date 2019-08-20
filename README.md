@@ -1,6 +1,6 @@
 # How To run the app
 
-Availabe at ...
+Availabe at  http://134.209.58.74:4000/
 
 ## Without Docker
 
